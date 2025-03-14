@@ -1,0 +1,207 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Cart Button Styles */
+.cart-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #4b5563;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* Profile Styles */
+.profile-container {
+    position: relative;
+}
+
+.profile-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #4b5563;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.profile-container:hover .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-name {
+    font-size: 1rem;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.profile-email {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.profile-menu {
+    padding: 0.5rem;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+}
+
+.profile-menu-item:hover {
+    background-color: #f3f4f6;
+}
+
+.profile-auth-buttons {
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.login-button, .signup-button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.login-button {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.signup-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+.login-button:hover {
+    background-color: #d1d5db;
+}
+
+.signup-button:hover {
+    background-color: #1d4ed8;
+}
+
+.signout-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 0.875rem;
+    border-radius: 6px;
+}
+
+.signout-button:hover {
+    background-color: #fef2f2;
+}
+
+/* Notification Styles */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #10B981;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} 
